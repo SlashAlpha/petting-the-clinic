@@ -21,7 +21,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <start-class>slash.process.pettingtheclinic.PettingTheClinicApplication</start-class>
     </properties>
 
     <dependencies>
