@@ -11,17 +11,27 @@ public class OwnerServiceImpl implements OwnerService {
     }
 
     @Override
-    public Owner findById(Long id) {
-        return null;
-    }
-
-    @Override
-    public Owner save(Owner owner) {
-        return null;
-    }
-
-    @Override
     public Set<Owner> findAll() {
         return null;
+    }
+
+    @Override
+    public Owner findById(Long aLong) {
+        return null;
+    }
+
+    @Override
+    public Owner save(Owner object) {
+        return null;
+    }
+
+    @Override
+    public void delete(Owner object) {
+
+    }
+
+    @Override
+    public void deleteById(Long aLong) {
+
     }
 }

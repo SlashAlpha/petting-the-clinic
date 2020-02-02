@@ -11,17 +11,27 @@ public class VetServiceImpl implements VetService {
     }
 
     @Override
-    public Vet findById(Long id) {
-        return null;
-    }
-
-    @Override
-    public Vet save(Vet vet) {
-        return null;
-    }
-
-    @Override
     public Set<Vet> findAll() {
         return null;
+    }
+
+    @Override
+    public Vet findById(Long aLong) {
+        return null;
+    }
+
+    @Override
+    public Vet save(Vet object) {
+        return null;
+    }
+
+    @Override
+    public void delete(Vet object) {
+
+    }
+
+    @Override
+    public void deleteById(Long aLong) {
+
     }
 }
