@@ -1,11 +1,13 @@
 package slash.process.pettingtheclinic.services.map;
 
 
+import org.springframework.stereotype.Service;
 import slash.process.pettingtheclinic.model.Vet;
 import slash.process.pettingtheclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
