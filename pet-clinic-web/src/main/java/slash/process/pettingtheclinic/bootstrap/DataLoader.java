@@ -6,22 +6,21 @@ import slash.process.pettingtheclinic.model.Owner;
 import slash.process.pettingtheclinic.model.Vet;
 import slash.process.pettingtheclinic.services.OwnerService;
 import slash.process.pettingtheclinic.services.VetService;
-import slash.process.pettingtheclinic.services.map.OwnerServiceMap;
-import slash.process.pettingtheclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
+
 
     private final OwnerService ownerService;
     private final VetService vetService;
     //  private final PetService petService;
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-        // petService=new PetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
