@@ -1,0 +1,14 @@
+slash\process\pettingtheclinic\services\map\PetServiceMap.class
+slash\process\pettingtheclinic\services\PetService.class
+slash\process\pettingtheclinic\model\Person.class
+slash\process\pettingtheclinic\services\map\AbstractMapService.class
+slash\process\pettingtheclinic\model\Pet.class
+slash\process\pettingtheclinic\model\Vet.class
+slash\process\pettingtheclinic\model\BaseEntity.class
+slash\process\pettingtheclinic\model\PetType.class
+slash\process\pettingtheclinic\services\map\VetServiceMap.class
+slash\process\pettingtheclinic\services\VetService.class
+slash\process\pettingtheclinic\services\map\OwnerServiceMap.class
+slash\process\pettingtheclinic\model\Owner.class
+slash\process\pettingtheclinic\services\OwnerService.class
+slash\process\pettingtheclinic\services\CrudService.class
