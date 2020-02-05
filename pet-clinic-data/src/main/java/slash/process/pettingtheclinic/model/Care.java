@@ -2,10 +2,11 @@ package slash.process.pettingtheclinic.model;
 
 public class Care extends BaseEntity {
     private String type;
-    private int time;
+    private double time;
     private String products;
-    private int productCost;
-    private int hourCost;
+    private double productCost;
+    private double hourCost;
+    private double administrationCost;
 
     public String getType() {
         return type;
@@ -15,11 +16,11 @@ public class Care extends BaseEntity {
         this.type = type;
     }
 
-    public int getTime() {
+    public double getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
     }
 
@@ -31,19 +32,27 @@ public class Care extends BaseEntity {
         this.products = products;
     }
 
-    public int getProductCost() {
+    public double getProductCost() {
         return productCost;
     }
 
-    public void setProductCost(int productCost) {
+    public void setProductCost(double productCost) {
         this.productCost = productCost;
     }
 
-    public int getHourCost() {
+    public double getHourCost() {
         return hourCost;
     }
 
-    public void setHourCost(int hourCost) {
+    public void setHourCost(double hourCost) {
         this.hourCost = hourCost;
+    }
+
+    public double getAdministrationCost() {
+        return administrationCost;
+    }
+
+    public void setAdministrationCost(double administrationCost) {
+        this.administrationCost = administrationCost;
     }
 }
