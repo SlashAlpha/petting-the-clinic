@@ -17,21 +17,33 @@ public class DataLoader implements CommandLineRunner {
     private final PetService petService;
     private final PetTypeService petTypeService;
     private final CareService careService;
+    private final SpecialtiesService specialtiesService;
+    private final VisitService visitService;
 
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetService petService,
-                      PetTypeService petTypeService, CareService careService) {
+                      PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService,
+                      VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petService = petService;
         this.petTypeService = petTypeService;
         this.careService = careService;
+        this.specialtiesService = specialtiesService;
+        this.visitService = visitService;
     }
 
 
     @Override
     public void run(String... args) throws Exception {
 
+        int count = petService.findAll().size();
+        if (count == 0) {
+            loadData();
+        }
+    }
+
+    private void loadData() {
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType saveDogPetType = petTypeService.save(dog);
@@ -99,16 +111,38 @@ public class DataLoader implements CommandLineRunner {
         vet1.setFirstName("Sam");
         vet1.setLastName("Axe");
         vet1.setSpecialties(new HashSet<>());
-        Specialty specialtyVet1 = new Specialty();
-        specialtyVet1.setDescription("Surgery");
-        vet1.getSpecialties().add(specialtyVet1);
+        Specialty surgery = new Specialty();
+        surgery.setDescription("Surgery");
+        Specialty savedSpeciality1 = specialtiesService.save(surgery);
+        vet1.getSpecialties().add(savedSpeciality1);
+        Specialty radiology = new Specialty();
+        radiology.setDescription("radiology");
+        Specialty savedRadiology = specialtiesService.save(radiology);
+        Specialty dentistry = new Specialty();
+        dentistry.setDescription("dentistry");
+        Specialty savedDentistry = specialtiesService.save(dentistry);
+
         vetService.save(vet1);
         System.out.println("Vet 1 loaded..");
         Vet vet2 = new Vet();
 
         vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
+        vet2.setSpecialties(new HashSet<>());
+        vet2.getSpecialties().add(savedRadiology);
         vetService.save(vet2);
         System.out.println("Vet 2 loaded..");
+        Visit visit1 = new Visit();
+        visit1.setCares(new HashSet<>());
+        visit1.getCares().add(idChip);
+        visit1.setDate(LocalDate.now());
+        visit1.setDescription("implementing id chip");
+        visit1.setPet(fionnasCat);
+        visit1.setVet(vet1);
+        visitService.save(visit1);
+        visit1.getCares().forEach(care -> {
+            System.out.println(visit1.getDescription() + " :");
+            System.out.println(care.getType());
+        });
     }
 }
