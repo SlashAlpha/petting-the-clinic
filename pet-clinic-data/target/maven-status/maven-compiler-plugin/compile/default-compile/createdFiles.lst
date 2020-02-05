@@ -1,3 +1,4 @@
+slash\process\pettingtheclinic\services\CareService.class
 slash\process\pettingtheclinic\services\map\PetServiceMap.class
 slash\process\pettingtheclinic\services\PetService.class
 slash\process\pettingtheclinic\model\Person.class
@@ -6,9 +7,17 @@ slash\process\pettingtheclinic\model\Pet.class
 slash\process\pettingtheclinic\model\Vet.class
 slash\process\pettingtheclinic\model\BaseEntity.class
 slash\process\pettingtheclinic\model\PetType.class
+slash\process\pettingtheclinic\services\map\CareMapService.class
 slash\process\pettingtheclinic\services\map\VetServiceMap.class
 slash\process\pettingtheclinic\services\VetService.class
+slash\process\pettingtheclinic\services\map\VisitMapService.class
 slash\process\pettingtheclinic\services\map\OwnerServiceMap.class
+slash\process\pettingtheclinic\services\map\PetTypeMapService.class
 slash\process\pettingtheclinic\model\Owner.class
 slash\process\pettingtheclinic\services\OwnerService.class
+slash\process\pettingtheclinic\model\Specialty.class
+slash\process\pettingtheclinic\services\PetTypeService.class
+slash\process\pettingtheclinic\services\VisitService.class
 slash\process\pettingtheclinic\services\CrudService.class
+slash\process\pettingtheclinic\model\Visit.class
+slash\process\pettingtheclinic\model\Care.class

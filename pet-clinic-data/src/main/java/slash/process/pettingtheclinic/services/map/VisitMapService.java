@@ -20,6 +20,8 @@ public class VisitMapService extends AbstractMapService<Visit, Long> implements 
 
     @Override
     public Visit save(Visit object) {
+
+
         return super.save(object);
     }
 
