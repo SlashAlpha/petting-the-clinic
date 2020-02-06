@@ -4,6 +4,6 @@ import slash.process.pettingtheclinic.model.Pet;
 
 
 public interface PetService extends CrudService<Pet, Long> {
-
+    Pet findByName(String name);
 
 }
