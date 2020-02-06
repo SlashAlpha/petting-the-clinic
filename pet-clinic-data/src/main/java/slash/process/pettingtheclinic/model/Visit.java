@@ -2,6 +2,7 @@ package slash.process.pettingtheclinic.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,7 +15,7 @@ public class Visit extends BaseEntity {
     private String description;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "visit_id"), inverseJoinColumns = @JoinColumn(name = "care_id"))
-    private Set<Care> cares;
+    private Set<Care> cares = new HashSet<>();
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
