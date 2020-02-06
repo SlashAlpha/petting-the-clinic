@@ -1,11 +1,24 @@
 package slash.process.pettingtheclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cares")
 public class Care extends BaseEntity {
+
+    @Column(name = "type")
     private String type;
+    @Column(name = "time")
     private double time;
+    @Column(name = "products")
     private String products;
+    @Column(name = "product_cost")
     private double productCost;
+    @Column(name = "hour_cost")
     private double hourCost;
+    @Column(name = "admin_cost")
     private double administrationCost;
 
     public String getType() {

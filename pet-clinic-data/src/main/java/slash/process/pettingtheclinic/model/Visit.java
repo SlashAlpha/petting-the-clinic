@@ -1,13 +1,25 @@
 package slash.process.pettingtheclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
+
+    @Column(name = "date")
     private LocalDate date;
+    @Column(name = "description")
     private String description;
+    @ManyToMany
+    @JoinTable(joinColumns = @JoinColumn(name = "visit_id"), inverseJoinColumns = @JoinColumn(name = "care_id"))
     private Set<Care> cares;
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
+    @ManyToOne
+    @JoinColumn(name = "vet_id")
     private Vet vet;
 
     public LocalDate getDate() {
