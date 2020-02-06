@@ -12,7 +12,7 @@ public class Visit extends BaseEntity {
     private LocalDate date;
     @Column(name = "description")
     private String description;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "visit_id"), inverseJoinColumns = @JoinColumn(name = "care_id"))
     private Set<Care> cares;
     @ManyToOne

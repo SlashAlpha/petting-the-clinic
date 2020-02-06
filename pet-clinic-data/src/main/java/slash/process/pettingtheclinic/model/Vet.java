@@ -1,6 +1,7 @@
 package slash.process.pettingtheclinic.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -10,6 +11,17 @@ public class Vet extends Person {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"), inverseJoinColumns = @JoinColumn(name = "specialty_id"))
     private Set<Specialty> specialties;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "vet_id")
+    private Set<Visit> visits = new HashSet<>();
+
+    public Set<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
+    }
 
     public Set<Specialty> getSpecialties() {
         return specialties;
