@@ -10,6 +10,11 @@ import java.util.Set;
 public class CareMapService extends AbstractMapService<Care, Long> implements CareService {
 
     @Override
+    public Care findByType(String name) {
+        return null;
+    }
+
+    @Override
     public Set<Care> findAll() {
         return super.findAll();
     }

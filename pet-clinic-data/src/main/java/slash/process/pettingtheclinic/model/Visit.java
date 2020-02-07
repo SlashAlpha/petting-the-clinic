@@ -22,6 +22,16 @@ public class Visit extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "vet_id")
     private Vet vet;
+    @Column(name = "tag")
+    private String tag;
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
 
     public LocalDate getDate() {
         return date;
