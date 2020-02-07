@@ -135,13 +135,14 @@ public class DataLoader implements CommandLineRunner {
         Visit visit1 = new Visit();
         visit1.setCares(new HashSet<>());
         visit1.getCares().add(idChip);
+        visit1.getCares().add(vaccine);
         visit1.setDate(LocalDate.now());
-        visit1.setDescription("implementing id chip");
+        visit1.setDescription("implementing id chip and vaccines");
         visit1.setPet(fionnasCat);
         visit1.setVet(vet1);
         visitService.save(visit1);
+        System.out.println(visit1.getDescription() + " :");
         visit1.getCares().forEach(care -> {
-            System.out.println(visit1.getDescription() + " :");
             System.out.println(care.getType());
         });
     }

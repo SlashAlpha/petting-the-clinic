@@ -1,5 +1,6 @@
 package slash.process.pettingtheclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import slash.process.pettingtheclinic.model.Specialty;
 import slash.process.pettingtheclinic.services.SpecialtiesService;
@@ -7,6 +8,7 @@ import slash.process.pettingtheclinic.services.SpecialtiesService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
     @Override
     public Set<Specialty> findAll() {
