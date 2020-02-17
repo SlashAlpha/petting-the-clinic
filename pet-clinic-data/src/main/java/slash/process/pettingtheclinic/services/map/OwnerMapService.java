@@ -8,6 +8,7 @@ import slash.process.pettingtheclinic.services.OwnerService;
 import slash.process.pettingtheclinic.services.PetService;
 import slash.process.pettingtheclinic.services.PetTypeService;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -69,8 +70,13 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findAll().stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst().orElse(null);
     }
 
-
+    @Override
+    public List<Owner> findAllByLastNameLike(String name) {
+        return null;
+    }
 }
