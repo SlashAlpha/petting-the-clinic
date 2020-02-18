@@ -26,53 +26,21 @@ public class Care extends BaseEntity {
     @Column(name = "hour_cost")
     private double hourCost;
     @Column(name = "admin_cost")
-    private double administrationCost;
+    private double administrativCost;
 
-    public String getType() {
-        return type;
+    @Column(name = "specification")
+    private String specification;
+    @Column(name = "totalcost")
+    private double totalCost;
+
+
+    public double getTotalCost() {
+        this.totalCost = productCost + administrativCost + Math.round((time / 60) * hourCost);
+        return totalCost;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 
-    public double getTime() {
-        return time;
-    }
 
-    public void setTime(double time) {
-        this.time = time;
-    }
 
-    public String getProducts() {
-        return products;
-    }
 
-    public void setProducts(String products) {
-        this.products = products;
-    }
-
-    public double getProductCost() {
-        return productCost;
-    }
-
-    public void setProductCost(double productCost) {
-        this.productCost = productCost;
-    }
-
-    public double getHourCost() {
-        return hourCost;
-    }
-
-    public void setHourCost(double hourCost) {
-        this.hourCost = hourCost;
-    }
-
-    public double getAdministrationCost() {
-        return administrationCost;
-    }
-
-    public void setAdministrationCost(double administrationCost) {
-        this.administrationCost = administrationCost;
-    }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html th:replace="~{fragments/layout :: layout (~{::body},'visits')}" xmlns:th="https://www.thymeleaf.org">
+
+<body>
+
+<h2>Visits</h2>
+
+<table class="table table-striped" id="visits">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Small Description</th>
+        <th style="width: 200px;">Date</th>
+        <th>Description</th>
+        <th style="width: 120px">Visit Cost</th>
+        <th>Owners</th>
+        <th>Pets</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="visit : ${visits}">
+        <td>
+            <a th:href="@{/owners/__${visit.getPet().getOwner().id}__/pets/__${visit.getPet().id}__/visits/__${visit.id}__}"
+               th:text="${visit.smallDescription}"/></a>
+        </td>
+        <td th:text="${visit.date}"/>
+        <td th:text="${visit.description}"/>
+        <td th:text="${visit.getVisitCost()}"/>
+        <td><a th:href="@{/owners/__${visit.getPet().getOwner().id}__}"
+               th:text="${visit.getPet().getOwner().getFirstName()}+' '+${visit.getPet().getOwner().getLastName()}"></a>
+        </td>
+        <td><span th:text="${visit.getPet().getName()} "/></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<h2>Cares</h2>
+<table class="table table-striped" id="cares">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Type</th>
+        <th style="width: 200px;">Time</th>
+
+        <th style="width: 120px">total cost</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="care : ${cares}">
+
+        </td>
+        <td th:text="${care.type}"/>
+        <td th:text="${care.time}+' min'"/>
+        <td th:text="${care.totalCost}"/>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -19,11 +19,10 @@ public class DataLoader implements CommandLineRunner {
     private final CareService careService;
     private final SpecialtiesService specialtiesService;
     private final VisitService visitService;
+    private final PrescriptionService prescriptionService;
 
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService,
-                      PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService,
-                      VisitService visitService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService, VisitService visitService, PrescriptionService prescriptionService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petService = petService;
@@ -31,8 +30,8 @@ public class DataLoader implements CommandLineRunner {
         this.careService = careService;
         this.specialtiesService = specialtiesService;
         this.visitService = visitService;
+        this.prescriptionService = prescriptionService;
     }
-
 
     @Override
     public void run(String... args) throws Exception {
@@ -53,21 +52,27 @@ public class DataLoader implements CommandLineRunner {
         PetType saveCatPetType = petTypeService.save(cat);
 
         Care vaccine = new Care();
+
         vaccine.setType("vaccine shot");
         vaccine.setHourCost(50);
         vaccine.setProductCost(20);
         vaccine.setProducts("sering,gloves,compress");
         vaccine.setTime(5);
-        vaccine.setAdministrationCost(5);
+        vaccine.setAdministrativCost(5);
+        vaccine.setSpecification("Qu'est-ce que le Lorem Ipsum?\n" +
+                "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depui");
+        ;
         Care saveVaccineCare = careService.save(vaccine);
 
         Care idChip = new Care();
         idChip.setType("tatoo ID chip");
         idChip.setHourCost(50);
         idChip.setProductCost(60);
-        idChip.setProducts("sering,glove compress");
+        idChip.setProducts("sering,glove, compress,chip");
         idChip.setTime(5);
-        idChip.setAdministrationCost(5);
+        idChip.setAdministrativCost(5);
+        idChip.setSpecification("Qu'est-ce que le Lorem Ipsum?\n" +
+                "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depui");
         Care saveidChipCare = careService.save(idChip);
 
 
@@ -140,9 +145,16 @@ public class DataLoader implements CommandLineRunner {
         visit1.getCares().add(idChip);
         visit1.getCares().add(vaccine);
         visit1.setDate(LocalDate.now());
-        visit1.setDescription("implementing id chip and vaccines");
+        visit1.setDescription("implementing id chip and vaccines.Nothing unusual");
         visit1.setPet(fionnasCat);
         visit1.setVet(vet1);
+        visit1.setSmallDescription("new pet package");
+        Prescription prescription = new Prescription();
+        prescription.setDescription("Qu'est-ce que le Lorem Ipsum?\n" +
+                "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depui");
+        prescriptionService.save(prescription);
+        visit1.setPrescription(prescription);
+
         visitService.save(visit1);
         System.out.println(visit1.getDescription() + " :");
         visit1.getCares().forEach(care -> {

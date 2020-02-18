@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html th:replace="~{fragments/layout :: layout (~{::body},'visits')}"
+      xmlns:th="https://www.thymeleaf.org">
+
+<body>
+
+<div class="col-md-12">
+
+
+    <div class="col-md-6">
+        <h2>Visit details</h2>
+        <table class="table table-striped" th:object="${visit}">
+            <tr>
+                <th>Name</th>
+                <td><a th:href="@{/owners/__${visit.getPet().getOwner().id}__}" th:text="*{pet.name}"></a></td>
+            </tr>
+            <tr>
+                <th>Date & time</th>
+                <td th:text="*{date}"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Vet on the case</th>
+                <td th:text="*{vet.getFirstName()+' '+vet.getLastName()}"/>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td th:text="*{smallDescription}"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2 align="bottom">Prescription</h2>
+    <div class="col-md-6">
+
+        <textarea cols="76" rows="8" th:text="${visit.getPrescription().getDescription()}"></textarea>
+
+    </div>
+</div>
+
+<br/>
+<br/>
+<h2>Visit Description and occurrences/events </h2>
+<div class="col-md-12">
+    <textarea cols="157" rows="6" th:text="${visit.getDescription()}"></textarea>
+</div>
+<br/>
+<br/>
+<h2>Cares</h2>
+
+<table class="table table-striped">
+
+    <tr th:each="care : ${visit.cares}">
+
+        <td valign="top">
+            <table class="table-condensed">
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Care specifications</th>
+
+                    <th>Products</th>
+
+                    <th>Time</th>
+
+                </tr>
+                </thead>
+                <tr>
+                    <td th:text="${care.getType()}" width="200"></td>
+                    <td width="460"><textarea cols="50" rows="4" th:text="${care.getSpecification()}"></textarea></td>
+
+                    <td th:text="${care.getProducts()}" width="270"></td>
+                    <td th:text="${care.time}+' min'" width="150"></td>
+                </tr>
+
+            </table>
+        </td>
+        <td valign="top">
+            <dl class="dl-horizontal">
+                <dt>Time</dt>
+                <dd
+                        th:text="${care.getHourCost()}+'$'"/>
+                </dd>
+                <dt>Product</dt>
+                <dd th:text="${care.getProductCost()}+'$'"/>
+                <dt>Admin Cost</dt>
+                <dd th:text="${care.administrativCost}+'$'"/>
+                </dd>
+                <dt>Total Cost</dt>
+                <dd th:text="${care.getTotalCost()}+'$'"/>
+                </dd>
+            </dl>
+        </td>
+    </tr>
+
+</table>
+<table class="table table-striped" id="visitCost">
+    <thead>
+    <tr>
+
+        <th>Visit Total Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${visit.getVisitCost()}+' $'"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

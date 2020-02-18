@@ -31,6 +31,21 @@ public class Visit extends BaseEntity {
     private Vet vet;
     @Column(name = "tag")
     private String tag;
+    @ManyToOne
+    @JoinColumn(name = "prescription_id")
+    private Prescription prescription;
+    @Column(name = "visit_cost")
+    private double visitCost;
+    @Column(name = "small_description")
+    private String smallDescription;
+
+
+    public double getVisitCost() {
+        cares.forEach(care -> {
+            visitCost += care.getTotalCost();
+        });
+        return visitCost;
+    }
 
 
 }

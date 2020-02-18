@@ -1,6 +1,7 @@
 package slash.process.pettingtheclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -50,6 +51,7 @@ public class VisitController {
     // Spring MVC calls method loadPetWithVisit(...) before initNewVisitForm is called
     @GetMapping("/owners/*/pets/{petId}/visits/new")
     public String initNewVisitForm(@PathVariable("petId") Long petId, Map<String, Object> model) {
+
         return "pets/createOrUpdateVisitForm";
     }
 
@@ -63,5 +65,12 @@ public class VisitController {
             return "redirect:/owners/{ownerId}";
         }
     }
+
+    @GetMapping("/owners/*/pets/{petId}/visits/{visitId}")
+    public String showVisit(@PathVariable Long visitId, Model model) {
+        model.addAttribute("visit", visitService.findById(visitId));
+        return "visits/showVisit";
+    }
+
 
 }
