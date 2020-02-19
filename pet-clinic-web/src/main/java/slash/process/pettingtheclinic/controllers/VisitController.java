@@ -14,6 +14,7 @@ import slash.process.pettingtheclinic.services.VisitService;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.Map;
+import java.util.Set;
 
 @Controller
 public class VisitController {
@@ -81,5 +82,11 @@ public class VisitController {
         return "visits/showVisit";
     }
 
+    @GetMapping("/api/visits")
+    public @ResponseBody
+    Set<Visit> getVisitsJson() {
+        return visitService.findAll();
+
+    }
 
 }

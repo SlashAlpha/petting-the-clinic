@@ -11,10 +11,25 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {
+
+    @Builder
+    public Visit(Long id, LocalDate date, String description, Set<Care> cares, Pet pet, Vet vet, String tag, Prescription prescription, double visitCost, String smallDescription) {
+        super.setId(id);
+        this.date = date;
+        this.description = description;
+        this.pet = pet;
+        this.vet = vet;
+        this.tag = tag;
+        this.prescription = prescription;
+        this.visitCost = visitCost;
+        this.smallDescription = smallDescription;
+        if (cares == null || cares.size() > 0) {
+            this.cares = cares;
+        }
+    }
 
     @Column(name = "date")
     private LocalDate date;
