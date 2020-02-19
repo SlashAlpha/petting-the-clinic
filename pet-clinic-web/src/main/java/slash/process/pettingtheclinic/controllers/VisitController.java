@@ -1,5 +1,6 @@
 package slash.process.pettingtheclinic.controllers;
 
+import org.springframework.beans.propertyeditors.PropertiesEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,6 +12,7 @@ import slash.process.pettingtheclinic.services.PetService;
 import slash.process.pettingtheclinic.services.VisitService;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.Map;
 
 @Controller
@@ -26,8 +28,15 @@ public class VisitController {
     }
 
     @InitBinder
-    public void setAllowedFields(WebDataBinder dataBinder) {
+    public void dataBinder(WebDataBinder dataBinder) {
+
         dataBinder.setDisallowedFields("id");
+        dataBinder.registerCustomEditor(LocalDate.class, new PropertiesEditor() {
+            @Override
+            public void setAsText(String text) throws IllegalArgumentException {
+                setValue(LocalDate.parse(text));
+            }
+        });
     }
 
     /**
