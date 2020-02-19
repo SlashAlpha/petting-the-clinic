@@ -6,21 +6,23 @@
     <title>List of Vets</title>
 </head>
 <body>
-<h2 th:text="#{listvets}">Welcome</h2>
+<!--/*@thymesVar id="specialty" type="slash.process.pettingtheclinic.model.Vet"*/-->
+<h2 th:text="#{listvets}">Veterinarians</h2>
 
 <table class="table table-striped" id="vets">
     <thead>
     <tr>
-        <th style="width: 150px;" th:text="#{id}">Id</th>
-        <th style="width: 200px;" th:text="#{firstname}">First Name</th>
-        <th style="width: 200px;" th:text="#{lastname}">Last Name</th>
+        <th>Name</th>
+        <th>Specialties</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="vet : ${vets}">
-        <td th:text="${vet?.id}"></td>
-        <td th:text="${vet.getFirstName()}"></td>
-        <td th:text="${vet.getLastName()}"></td>
+        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+        <td>
+        <span th:each="specialty : ${vet.getSpecialties()}"
+              th:text="${specialty.getDescription() + ' '}"/> <span
+                th:if="${vet?.getSpecialties()?.size() == 0}">none</span></td>
     </tr>
     </tbody>
 </table>

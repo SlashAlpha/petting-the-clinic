@@ -1,5 +1,8 @@
 slash\process\pettingtheclinic\bootstrap\DataLoader.class
 slash\process\pettingtheclinic\controllers\VetController.class
+slash\process\pettingtheclinic\controllers\VisitController.class
 slash\process\pettingtheclinic\controllers\OwnerController.class
 slash\process\pettingtheclinic\PettingTheClinicApplication.class
 slash\process\pettingtheclinic\controllers\IndexController.class
+slash\process\pettingtheclinic\formatters\petTypeFormatter.class
+slash\process\pettingtheclinic\controllers\PetController.class

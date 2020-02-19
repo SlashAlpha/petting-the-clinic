@@ -6908,6 +6908,9 @@ h1 {
   line-height: 24px;
   margin: 0 0 30px;
 }
+#visitCost {
+  text-align: right;
+}
 .form-horizontal button.btn-inverse {
   margin-left: 32px;
 }
