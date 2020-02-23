@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "prescriptions")
 public class Prescription extends BaseEntity {
+
     public String description;
     public boolean renewal;
     public double validityPeriod;

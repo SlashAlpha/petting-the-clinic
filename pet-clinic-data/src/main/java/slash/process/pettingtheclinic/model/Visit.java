@@ -53,6 +53,10 @@ public class Visit extends BaseEntity {
     private double visitCost;
     @Column(name = "small_description")
     private String smallDescription;
+    @ManyToOne
+    @JoinColumn(name = "analysis_id")
+    private Analysis analysis;
+
 
 
     public double getVisitCost() {

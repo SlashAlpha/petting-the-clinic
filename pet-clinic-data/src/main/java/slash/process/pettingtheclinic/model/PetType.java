@@ -25,6 +25,9 @@ public class PetType extends BaseEntity {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "specificity")
+    private String specificity;
+
     @Override
     public String toString() {
         return name;
