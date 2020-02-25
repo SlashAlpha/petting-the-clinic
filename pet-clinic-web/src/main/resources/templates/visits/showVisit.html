@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <th>Vet on the case</th>
-                <td th:text="*{vet.getFirstName()+' '+vet.getLastName()}"/>
+                <td th:text="*{vet?.getFirstName()+' '+vet?.getLastName()}"/>
                 </td>
             </tr>
             <tr>
@@ -42,7 +42,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
         <div><span class="label label-warning">Warning</span></div>
-        <textarea cols="76" rows="8" th:text="${visit.getPrescription().getDescription()}">
+        <textarea cols="76" rows="8" th:text="${visit?.getPrescription()?.getDescription()}">
 
 
         </textarea>
@@ -54,7 +54,7 @@
 <br/>
 <h2>Visit Description and occurrences/events </h2>
 <div class="col-md-12">
-    <textarea cols="157" rows="6" th:text="${visit.getDescription()}"></textarea>
+    <textarea cols="157" rows="6" th:text="${visit?.getDescription()}"></textarea>
 </div>
 <br/>
 <br/>
@@ -62,7 +62,7 @@
 
 <table class="table table-striped">
 
-    <tr th:each="care : ${visit.cares}">
+    <tr th:each="care : ${visit?.cares}">
 
         <td valign="top">
             <table class="table-condensed">
@@ -78,11 +78,11 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td th:text="${care.getType()}" width="200"></td>
+                    <td th:text="${care?.getType()}" width="200"></td>
                     <td width="460"><textarea cols="50" rows="4" th:text="${care.getSpecification()}"></textarea></td>
 
-                    <td th:text="${care.getProducts()}" width="270"></td>
-                    <td th:text="${care.time}+' min'" width="150"></td>
+                    <td th:text="${care?.getProducts()}" width="270"></td>
+                    <td th:text="${care?.time}+' min'" width="150"></td>
                 </tr>
 
             </table>
@@ -91,15 +91,15 @@
             <dl class="dl-horizontal">
                 <dt>Time</dt>
                 <dd
-                        th:text="${care.getHourCost()}+'$'"/>
+                        th:text="${care?.getHourCost()}+'$'"/>
                 </dd>
                 <dt>Product</dt>
-                <dd th:text="${care.getProductCost()}+'$'"/>
+                <dd th:text="${care?.getProductCost()}+'$'"/>
                 <dt>Admin Cost</dt>
-                <dd th:text="${care.administrativCost}+'$'"/>
+                <dd th:text="${care?.administrativCost}+'$'"/>
                 </dd>
                 <dt>Total Cost</dt>
-                <dd th:text="${care.getTotalCost()}+'$'"/>
+                <dd th:text="${care?.getTotalCost()}+'$'"/>
                 </dd>
             </dl>
         </td>
@@ -115,7 +115,7 @@
     </thead>
     <tbody>
     <tr>
-        <td th:text="${visit.getVisitCost()}+' $'"></td>
+        <td th:text="${visit?.getVisitCost()}+' $'"></td>
     </tr>
     </tbody>
 </table>

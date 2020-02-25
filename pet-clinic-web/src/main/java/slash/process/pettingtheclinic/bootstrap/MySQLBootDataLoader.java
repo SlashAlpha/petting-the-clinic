@@ -1,7 +1,6 @@
 package slash.process.pettingtheclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 import slash.process.pettingtheclinic.model.*;
 import slash.process.pettingtheclinic.services.*;
 
@@ -9,8 +8,7 @@ import java.time.LocalDate;
 import java.util.HashSet;
 
 
-@Component
-public class DataLoader implements CommandLineRunner {
+public class MySQLBootDataLoader implements CommandLineRunner {
 
 
     private final OwnerService ownerService;
@@ -23,7 +21,7 @@ public class DataLoader implements CommandLineRunner {
     private final PrescriptionService prescriptionService;
 
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService, VisitService visitService, PrescriptionService prescriptionService) {
+    public MySQLBootDataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService, VisitService visitService, PrescriptionService prescriptionService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petService = petService;
@@ -163,3 +161,4 @@ public class DataLoader implements CommandLineRunner {
         });
     }
 }
+

@@ -7,12 +7,15 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import slash.process.pettingtheclinic.model.Pet;
+import slash.process.pettingtheclinic.model.Vet;
 import slash.process.pettingtheclinic.model.Visit;
 import slash.process.pettingtheclinic.services.PetService;
+import slash.process.pettingtheclinic.services.VetService;
 import slash.process.pettingtheclinic.services.VisitService;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
@@ -22,10 +25,12 @@ public class VisitController {
     private final VisitService visitService;
 
     private final PetService petService;
+    private final VetService vetService;
 
-    public VisitController(VisitService visitService, PetService petService) {
+    public VisitController(VisitService visitService, PetService petService, VetService vetService) {
         this.visitService = visitService;
         this.petService = petService;
+        this.vetService = vetService;
     }
 
     @InitBinder
@@ -38,6 +43,11 @@ public class VisitController {
                 setValue(LocalDate.parse(text));
             }
         });
+    }
+
+    @ModelAttribute("vets")
+    public Collection<Vet> populateVet() {
+        return vetService.findAll();
     }
 
     /**
@@ -67,10 +77,11 @@ public class VisitController {
 
     // Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is called
     @PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
-    public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result, Vet vet) {
         if (result.hasErrors()) {
             return "pets/createOrUpdateVisitForm";
         } else {
+            visit.setVet(vet);
             visitService.save(visit);
             return "redirect:/owners/{ownerId}";
         }

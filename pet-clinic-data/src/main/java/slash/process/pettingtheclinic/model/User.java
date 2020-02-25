@@ -18,6 +18,7 @@ public class User extends Person {
     private String userName;
     @Column(name = "email")
     private String email;
+    @Lob
     @Column(name = "password")
     private String password;
     @Column(name = "mobile")
@@ -30,11 +31,5 @@ public class User extends Person {
             , inverseJoinColumns = @JoinColumn(name = "auth_role_id"))
     private Set<Role> roles;
 
-    private String passwordConfirm;
-
-    @Transient
-    public String getPasswordConfirm() {
-        return passwordConfirm;
-    }
 
 }

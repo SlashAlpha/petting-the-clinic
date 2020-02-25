@@ -30,6 +30,7 @@ public class Pet extends BaseEntity {
         ;
     }
 
+    //pharmacy, sickness, medication
     @Column(name = "name")
     private String name;
     @Column(name = "birth_date")
