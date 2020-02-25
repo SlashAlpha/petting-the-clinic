@@ -1,8 +1,10 @@
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\IndexController.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\OwnerController.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\bootstrap\DataLoader.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\PettingTheClinicApplication.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\VisitController.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\PetController.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\formatters\petTypeFormatter.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\VetController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\bootstrap\DataLoader.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\VisitController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\formatters\vetFormatter.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\formatters\petTypeFormatter.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\PettingTheClinicApplication.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\VetController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\OwnerController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\IndexController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\controllers\PetController.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-web\src\main\java\slash\process\pettingtheclinic\bootstrap\MySQLBootDataLoader.java

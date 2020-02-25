@@ -16,6 +16,7 @@ import java.util.Set;
 @Controller
 public class IndexController {
 
+
     VisitService visitService;
     CareService careService;
     PrescriptionService prescriptionService;

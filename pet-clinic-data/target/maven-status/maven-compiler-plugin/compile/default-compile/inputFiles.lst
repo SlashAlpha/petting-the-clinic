@@ -1,44 +1,54 @@
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\SpecialtyRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Vet.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PetSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\CrudService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PrescriptionSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Pet.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PetTypeSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PetRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PetTypeMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\VetRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\SpecialtySDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\CareSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Specialty.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PrescriptionMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\VetMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\VetService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PetTypeRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\SpecialtiesService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\VisitService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Owner.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\VisitMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PrescriptionService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\OwnerSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Visit.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\OwnerRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\OwnerService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Prescription.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Care.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PetTypeService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\AbstractMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\VetSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Person.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\PetType.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\CareMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\SpecialtyMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\BaseEntity.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PrescriptionRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PetService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\OwnerMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\VisitSDJpaService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\CareRepository.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\CareService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PetMapService.java
-C:\Spring Files\PetClinic\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\VisitRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\VetMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\CrudService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Person.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Care.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PrescriptionService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\AnalysisSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PetRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PetTypeMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PetTypeService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\SpecialtySDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\CareService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\AbstractMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\OwnerSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Analysis.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\UserService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\PetService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\VisitService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Owner.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\User.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Pet.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\OwnerMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\SpecialtiesService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\CareSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PrescriptionRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Vet.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Role.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\AnalysisService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\VetRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PetTypeSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\VisitSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PrescriptionSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\SpecialtyRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\VetSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\VetService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\BaseEntity.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PetMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\AnalysisRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\SpecialtyMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\PetType.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\OwnerService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\VisitRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Prescription.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\CareMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\springdatajpa\PetSDJpaService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Visit.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\UserRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\RoleRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\PetTypeRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\CareRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\VisitMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\repositories\OwnerRepository.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\AnalysisMapService.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\model\Specialty.java
+C:\Users\dupra\IdeaProjects\petting-the-clinic\pet-clinic-data\src\main\java\slash\process\pettingtheclinic\services\map\PrescriptionMapService.java
