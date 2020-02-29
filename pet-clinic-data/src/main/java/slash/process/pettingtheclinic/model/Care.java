@@ -2,9 +2,8 @@ package slash.process.pettingtheclinic.model;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -33,6 +32,9 @@ public class Care extends BaseEntity {
     @Column(name = "totalcost")
     private double totalCost;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(joinColumns = @JoinColumn(name = "care_id"), inverseJoinColumns = @JoinColumn(name = "medicament_id"))
+    private Set<Medicament> medicaments;
 
     public double getTotalCost() {
         this.totalCost = productCost + administrativCost + Math.round((time / 60) * hourCost);

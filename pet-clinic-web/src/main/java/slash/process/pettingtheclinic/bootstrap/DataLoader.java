@@ -6,6 +6,7 @@ import slash.process.pettingtheclinic.model.*;
 import slash.process.pettingtheclinic.services.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashSet;
 
 
@@ -21,9 +22,12 @@ public class DataLoader implements CommandLineRunner {
     private final SpecialtiesService specialtiesService;
     private final VisitService visitService;
     private final PrescriptionService prescriptionService;
+    private final PharmacyService pharmacyService;
+    private final MedicamentService medicamentService;
+    private final AnalysisService analysisService;
 
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService, VisitService visitService, PrescriptionService prescriptionService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, CareService careService, SpecialtiesService specialtiesService, VisitService visitService, PrescriptionService prescriptionService, PharmacyService pharmacyService, MedicamentService medicamentService, AnalysisService analysisService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petService = petService;
@@ -32,6 +36,9 @@ public class DataLoader implements CommandLineRunner {
         this.specialtiesService = specialtiesService;
         this.visitService = visitService;
         this.prescriptionService = prescriptionService;
+        this.pharmacyService = pharmacyService;
+        this.medicamentService = medicamentService;
+        this.analysisService = analysisService;
     }
 
     @Override
@@ -44,9 +51,37 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private void loadData() {
+        Pharmacy pharmacy = new Pharmacy();
+        pharmacy.setAmount(0);
+        pharmacy.setNumberOfMedicaments(0);
+        pharmacyService.save(pharmacy);
+        Medicament medicament1 = new Medicament();
+        medicament1.setExpirationDate(new Date());
+        medicament1.setName("blood pressure up");
+        medicament1.setNumber(5);
+        medicament1.setPrice(10);
+        medicament1.setPharmacy(pharmacy);
+        Medicament medicament1saved = medicamentService.save(medicament1);
+        Medicament medicament2 = new Medicament();
+        medicament2.setExpirationDate(new Date());
+        medicament2.setName("blood pressure down");
+        medicament2.setNumber(6);
+        medicament2.setPrice(9);
+        medicament2.setPharmacy(pharmacy);
+        Medicament medicament2saved = medicamentService.save(medicament2);
+        System.out.println("medicament saved");
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType saveDogPetType = petTypeService.save(dog);
+
+        Analysis analysis = new Analysis();
+        analysis.setConclusions("the end");
+        analysis.setDescription("the end");
+        analysis.setType("end");
+        analysisService.save(analysis);
+
+
+
 
         PetType cat = new PetType();
         cat.setName("Cat");

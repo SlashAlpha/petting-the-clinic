@@ -14,5 +14,8 @@ spring:
         persistence:
           schema-generation:
             create-source: metadata
+            scripts:
+              action: create
+              create-target: slash_database_create.sql
 
 
